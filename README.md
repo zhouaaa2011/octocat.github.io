@@ -57,3 +57,88 @@ yesButton.addEventListener("click", function() {
 
     document.body.style.overflow = "hidden";
 });
+
+body {
+    background-color: #f1d5da; /* 浅粉色 */
+    text-align: center;
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+}
+
+/* 页面内容居中 */
+.container {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+/* 让图片大小适中 */
+#mainImage {
+    width: 200px;
+    transition: all 0.3s ease;
+}
+
+/* 文字 */
+h1 {
+    font-size: 28px;
+    color: #68495b;
+}
+
+/* 按钮样式 */
+button {
+    font-size: 18px;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    margin: 10px;
+    transition: all 0.3s ease;
+}
+
+#yes {
+    background-color: #d4818e; /* 粉色 */
+    color: white;
+}
+
+#no {
+    background-color: #6784b1; /* 蓝色 */
+    color: white;
+    position: relative;
+}
+
+/* Yes 完全填满屏幕 */
+.yes-screen {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    background-color: #ffdae0; /* 粉色 */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>可以成为我的恋人吗？</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <img id="mainImage" src="images/heart.png" alt="爱心">
+        <h1 id="question">可以成为我的恋人吗？</h1>
+        <div class="buttons">
+            <button id="yes">可以</button>
+            <button id="no">不要</button>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
